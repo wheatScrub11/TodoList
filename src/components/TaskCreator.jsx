@@ -10,7 +10,7 @@ function TaskCreator({ discardCreateTaskBox, addNewTodo }) {
       <textarea
         className="text-area"
         cols="30"
-        rows="5"
+        rows="4"
         placeholder="type here"
         onChange={(e) => setTask(e.target.value)}
       ></textarea>

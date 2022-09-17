@@ -1,5 +1,5 @@
 .task-container{
-    width: 600px;
+    width: 60vw;
     height: fit-content;
     display: flex;
     justify-content: space-between;
@@ -9,6 +9,7 @@
     word-break: break-word;
     white-space: pre-wrap;
     animation: taskan forwards 0.5s ease-out;
+    margin: 0 auto;
 
 }
 @keyframes taskan {
@@ -29,13 +30,15 @@
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+    text-align: justify;
+    font-size: 1.2rem;
 }
 
 .btn{
-    padding: 3px;
+    padding: 4px;
     border-radius: 50%;
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
 }
 .btn:hover{
     border: 1px solid white;
@@ -61,10 +64,11 @@
 
 
 .editbox-container{
-    width: 600px;
+    width: 60vw;
     background-color: rgba(190, 139, 255, 0.19);
     padding: 1em;
     border-radius: 10px;
+    margin: 0 auto;
 }
 .text-area{
     padding: 1em;
@@ -107,4 +111,44 @@
     background-color: rgba(179, 122, 255, 0.313);
     transition: all 200ms;
     transition-timing-function: ease-in-out;
+}
+
+@media (max-width: 900px) {
+    .task-container{
+        width: 80vw;
+    }
+    .editbox-container{
+        width: 80vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .task-container{
+        flex-direction: column;
+        width: 80vw;
+    }
+    .editbox-container{
+        width: 80vw;
+    }
+    .btns-container{
+        margin-top: 1em;
+        justify-content: center;
+    }
+    .task-container{
+        padding: 1em 3em;
+    }
+    .task-text{
+        margin-right: 0;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .task-container{
+        padding: 1em 2em;
+    }
+    .editbox-container{
+        width: 80vw;
+    }
 }

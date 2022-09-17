@@ -9,7 +9,7 @@ function TaskElement({ todo, deleteTodo, editTodo }) {
   const [showEditTask, setShowEditTask] = useState(true);
   const [doneTask, setDoneTask] = useState(false);
   return (
-    <div>
+    <>
       {showEditTask ? (
         <div className={`task-container ${doneTask ? "done" : "undone"}`}>
           <div
@@ -64,7 +64,7 @@ function TaskElement({ todo, deleteTodo, editTodo }) {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
