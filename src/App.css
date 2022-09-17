@@ -1,0 +1,33 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.add-task-button{
+  background-color: rgba(108, 255, 71, 0.845);
+  padding: 1.3em 1em;
+  cursor: pointer;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+}
+.add-task-button:hover{
+  background-color: rgba(99, 255, 60, 0.94);
+}
+
+.tasks{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: column;
+  margin-top: 2em;
+}
