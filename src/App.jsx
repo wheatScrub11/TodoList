@@ -16,6 +16,7 @@ function App() {
     const newTodo = {
       id: todoList.length == 0 ? 1 : todoList[todoList.length - 1].id + 1,
       task: task,
+      done: false,
     };
 
     setTodoList([...todoList, newTodo]);
@@ -30,11 +31,21 @@ function App() {
       todoList.map((todo) => {
         if (todo.id == taskID) {
           // DONT KNOW WHY I CANNOT USE TERNARY OPERATOR
-          return { id: todo.id, task: editedTodo };
+          return { id: todo.id, task: editedTodo, done: false };
         } else {
           return todo;
         }
       })
+    );
+  };
+
+  const setDoneTask = (taskID) => {
+    setTodoList(
+      todoList.map((todo) =>
+        todo.id == taskID
+          ? { id: todo.id, task: todo.task, done: !todo.done }
+          : todo
+      )
     );
   };
 
@@ -59,6 +70,7 @@ function App() {
               todo={todo}
               deleteTodo={deleteTodo}
               editTodo={editTodo}
+              setDoneTask={setDoneTask}
             />
           );
         })}

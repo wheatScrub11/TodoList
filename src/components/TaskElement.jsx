@@ -4,17 +4,17 @@ import "./TaskElement.css";
 import { BsTrash, BsCheck2Circle } from "react-icons/bs";
 import { AiOutlineEdit } from "react-icons/ai";
 
-function TaskElement({ todo, deleteTodo, editTodo }) {
+function TaskElement({ todo, deleteTodo, editTodo, setDoneTask }) {
   const [editableTask, setEditableTask] = useState("");
   const [showEditTask, setShowEditTask] = useState(true);
-  const [doneTask, setDoneTask] = useState(false);
+
   return (
     <>
       {showEditTask ? (
-        <div className={`task-container ${doneTask ? "done" : "undone"}`}>
+        <div className={`task-container ${todo.done ? "done" : "undone"}`}>
           <div
             className="task-text"
-            style={doneTask ? { color: "black" } : { color: "white" }}
+            style={todo.done ? { color: "black" } : { color: "white" }}
           >
             {todo.task}
           </div>
@@ -30,7 +30,7 @@ function TaskElement({ todo, deleteTodo, editTodo }) {
             />
             <BsCheck2Circle
               className="done-btn btn"
-              onClick={() => setDoneTask(!doneTask)}
+              onClick={() => setDoneTask(todo.id)}
             />
           </div>
         </div>

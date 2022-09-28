@@ -66,13 +66,13 @@
 .editbox-container{
     width: 60vw;
     background-color: rgba(190, 139, 255, 0.19);
-    padding: 1em;
+    padding: 1em 1em 0.7em 1em;
     border-radius: 10px;
     margin: 0 auto;
 }
 .text-area{
     padding: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .discard-btn{
